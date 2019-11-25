@@ -11,6 +11,11 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_elementui_72a9ed1c from 'nuxt_plugin_elementui_72a9ed1c' // Source: ..\\plugins\\element-ui.js (mode: 'client')
+import nuxt_plugin_antdesignvue_d71cc8f8 from 'nuxt_plugin_antdesignvue_d71cc8f8' // Source: ..\\plugins\\ant-design-vue.js (mode: 'client')
+import nuxt_plugin_deploycomponents_515ddd31 from 'nuxt_plugin_deploycomponents_515ddd31' // Source: ..\\plugins\\deploy-components.js (mode: 'client')
+import nuxt_plugin_moment_57893d7e from 'nuxt_plugin_moment_57893d7e' // Source: ..\\plugins\\moment.js (mode: 'client')
+
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -111,7 +116,53 @@ async function createApp (ssrContext) {
     ssrContext
   })
 
+  const inject = function (key, value) {
+    if (!key) {
+      throw new Error('inject(key, value) has no key provided')
+    }
+    if (value === undefined) {
+      throw new Error('inject(key, value) has no value provided')
+    }
+
+    key = '$' + key
+    // Add into app
+    app[key] = value
+
+    // Check if plugin not already installed
+    const installKey = '__nuxt_' + key + '_installed__'
+    if (Vue[installKey]) {
+      return
+    }
+    Vue[installKey] = true
+    // Call Vue.use() to install the plugin into vm
+    Vue.use(() => {
+      if (!Vue.prototype.hasOwnProperty(key)) {
+        Object.defineProperty(Vue.prototype, key, {
+          get () {
+            return this.$root.$options[key]
+          }
+        })
+      }
+    })
+  }
+
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_elementui_72a9ed1c === 'function') {
+    await nuxt_plugin_elementui_72a9ed1c(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_antdesignvue_d71cc8f8 === 'function') {
+    await nuxt_plugin_antdesignvue_d71cc8f8(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_deploycomponents_515ddd31 === 'function') {
+    await nuxt_plugin_deploycomponents_515ddd31(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_moment_57893d7e === 'function') {
+    await nuxt_plugin_moment_57893d7e(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

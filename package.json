@@ -13,6 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "ant-design-vue": "^1.4.6",
+    "element-ui": "^2.12.0",
+    "moment": "^2.24.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

@@ -20,6 +20,13 @@ module.exports = {
   /*
   ** Build configuration
   */
+ plugins:[
+   {src:'~/plugins/element-ui.js',ssr:false},
+   {src:'~/plugins/ant-design-vue.js',ssr:false},
+  //  {src:'~/plugins/deploy-layout.js',ssr:false},
+   {src:'~/plugins/deploy-components.js',ssr:false},
+   {src:'~/plugins/moment.js',ssr:false}
+ ],
   build: {
     /*
     ** Run ESLint on save

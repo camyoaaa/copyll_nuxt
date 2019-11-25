@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>价格页面</h1>
+        <h1>默认价格页面</h1>
     </div>
 </template>
 
