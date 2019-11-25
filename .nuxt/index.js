@@ -13,8 +13,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_elementui_72a9ed1c from 'nuxt_plugin_elementui_72a9ed1c' // Source: ..\\plugins\\element-ui.js (mode: 'client')
 import nuxt_plugin_antdesignvue_d71cc8f8 from 'nuxt_plugin_antdesignvue_d71cc8f8' // Source: ..\\plugins\\ant-design-vue.js (mode: 'client')
-import nuxt_plugin_deploycomponents_515ddd31 from 'nuxt_plugin_deploycomponents_515ddd31' // Source: ..\\plugins\\deploy-components.js (mode: 'client')
 import nuxt_plugin_moment_57893d7e from 'nuxt_plugin_moment_57893d7e' // Source: ..\\plugins\\moment.js (mode: 'client')
+import nuxt_plugin_deploycomponents_515ddd31 from 'nuxt_plugin_deploycomponents_515ddd31' // Source: ..\\plugins\\deploy-components.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -156,12 +156,12 @@ async function createApp (ssrContext) {
     await nuxt_plugin_antdesignvue_d71cc8f8(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_deploycomponents_515ddd31 === 'function') {
-    await nuxt_plugin_deploycomponents_515ddd31(app.context, inject)
-  }
-
   if (process.client && typeof nuxt_plugin_moment_57893d7e === 'function') {
     await nuxt_plugin_moment_57893d7e(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_deploycomponents_515ddd31 === 'function') {
+    await nuxt_plugin_deploycomponents_515ddd31(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
