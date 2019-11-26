@@ -19,7 +19,9 @@
                         <a @click="gotoClientDownloadPage"><i class="lion lion-xiazai"></i> 客户端下载</a>
                     </li>
                     <li class="hidden-md dropdown">
-                        <a @click="gotoPriceListPage"><i class="lion lion-qian"></i> 任务价格表</a>
+                        <a href="/price"><i class="lion lion-qian"></i> 任务价格表</a>
+                        <nuxt-link to="/price"><i class="lion lion-qian"></i> 任务价格表</nuxt-link>
+                        <!-- <a @click="gotoPriceListPage"> -->
                     </li>
                 </ul>
                 <ul class="pull-left topbar-nav list-unstyled ng-scope" style="margin-left: 55px;">

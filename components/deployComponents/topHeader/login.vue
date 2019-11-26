@@ -1,5 +1,5 @@
 <template>
-    <div class="ll-modal">
+    <div class="ll-modal" v-show="visible">
         <a-modal :closable="false" width="500px" :visible="visible" :footer="null" @cancel="handleCancel" :mask-style="{background:'rgba(0, 0, 0, 0.3)'}">
 
             <div class="modal-login" style="margin:-25px;margin-bottom:40px;border-radius:0px">

@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import '@/assets/deploy/pluginsInit.js';
 import zhCN from "ant-design-vue/lib/locale-provider/zh_CN";
 import pageConfig from "@/assets/deploy/pageConfig.js";
 import topHeader from "@/components/deployComponents/topHeader";
@@ -133,7 +134,7 @@ export default {
         {
           rel: "stylesheet",
           href: "/deploy/app.css"
-        }
+        },
       ],
       noscript: [
         {

@@ -3,31 +3,34 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _97845c0e = () => interopDefault(import('..\\pages\\deploy.vue' /* webpackChunkName: "pages_deploy" */))
-const _5f1c0869 = () => interopDefault(import('..\\pages\\deploy\\index.vue' /* webpackChunkName: "pages_deploy_index" */))
-const _766a47d4 = () => interopDefault(import('..\\pages\\deploy\\chaxun\\index.vue' /* webpackChunkName: "pages_deploy_chaxun_index" */))
-const _aa2200d6 = () => interopDefault(import('..\\pages\\deploy\\douyin\\index.vue' /* webpackChunkName: "pages_deploy_douyin_index" */))
-const _dc3c19ce = () => interopDefault(import('..\\pages\\deploy\\guaji\\index.vue' /* webpackChunkName: "pages_deploy_guaji_index" */))
-const _169added = () => interopDefault(import('..\\pages\\deploy\\jingdong\\index.vue' /* webpackChunkName: "pages_deploy_jingdong_index" */))
-const _fdf01f78 = () => interopDefault(import('..\\pages\\deploy\\muban\\index.vue' /* webpackChunkName: "pages_deploy_muban_index" */))
-const _0f34b3ac = () => interopDefault(import('..\\pages\\deploy\\pinduoduo.vue' /* webpackChunkName: "pages_deploy_pinduoduo" */))
-const _6e486756 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo\\index.vue' /* webpackChunkName: "pages_deploy_pinduoduo_index" */))
-const _502d1961 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo\\_category.vue' /* webpackChunkName: "pages_deploy_pinduoduo__category" */))
-const _304146a7 = () => interopDefault(import('..\\pages\\deploy\\taobao.vue' /* webpackChunkName: "pages_deploy_taobao" */))
-const _e5cad80a = () => interopDefault(import('..\\pages\\deploy\\taobao\\index.vue' /* webpackChunkName: "pages_deploy_taobao_index" */))
-const _2b1e6b86 = () => interopDefault(import('..\\pages\\deploy\\taobao\\_category.vue' /* webpackChunkName: "pages_deploy_taobao__category" */))
-const _75e13c4b = () => interopDefault(import('..\\pages\\deploy\\test.vue' /* webpackChunkName: "pages_deploy_test" */))
-const _8962ea42 = () => interopDefault(import('..\\pages\\deploy\\chaxun\\_category.vue' /* webpackChunkName: "pages_deploy_chaxun__category" */))
-const _2b3f7a20 = () => interopDefault(import('..\\pages\\deploy\\douyin\\_category.vue' /* webpackChunkName: "pages_deploy_douyin__category" */))
-const _9e75e8b8 = () => interopDefault(import('..\\pages\\deploy\\guaji\\_category.vue' /* webpackChunkName: "pages_deploy_guaji__category" */))
-const _06a46c78 = () => interopDefault(import('..\\pages\\deploy\\jingdong\\_category.vue' /* webpackChunkName: "pages_deploy_jingdong__category" */))
-const _75027b4f = () => interopDefault(import('..\\pages\\deploy\\muban\\_category.vue' /* webpackChunkName: "pages_deploy_muban__category" */))
-const _5a06f627 = () => interopDefault(import('..\\pages\\price.vue' /* webpackChunkName: "pages_price" */))
-const _ac0f170a = () => interopDefault(import('..\\pages\\price\\index.vue' /* webpackChunkName: "pages_price_index" */))
-const _7ac3f40e = () => interopDefault(import('..\\pages\\price\\test.vue' /* webpackChunkName: "pages_price_test" */))
-const _21d95469 = () => interopDefault(import('..\\pages\\price\\test\\index.vue' /* webpackChunkName: "pages_price_test_index" */))
-const _a4e5a87c = () => interopDefault(import('..\\pages\\price\\test\\_testtype.vue' /* webpackChunkName: "pages_price_test__testtype" */))
-const _aeccfda0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _61c276fe = () => interopDefault(import('..\\pages\\deploy.vue' /* webpackChunkName: "pages_deploy" */))
+const _5446ace1 = () => interopDefault(import('..\\pages\\deploy\\index.vue' /* webpackChunkName: "pages_deploy_index" */))
+const _0e761768 = () => interopDefault(import('..\\pages\\deploy\\chaxun\\index.vue' /* webpackChunkName: "pages_deploy_chaxun_index" */))
+const _2d49ac0d = () => interopDefault(import('..\\pages\\deploy\\douyin\\index.vue' /* webpackChunkName: "pages_deploy_douyin_index" */))
+const _4bc3d7a1 = () => interopDefault(import('..\\pages\\deploy\\guaji\\index.vue' /* webpackChunkName: "pages_deploy_guaji_index" */))
+const _6cfc4c65 = () => interopDefault(import('..\\pages\\deploy\\jingdong\\index.vue' /* webpackChunkName: "pages_deploy_jingdong_index" */))
+const _3ae9d4cc = () => interopDefault(import('..\\pages\\deploy\\muban\\index.vue' /* webpackChunkName: "pages_deploy_muban_index" */))
+const _6d085c24 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo.vue' /* webpackChunkName: "pages_deploy_pinduoduo" */))
+const _37d67044 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo\\index.vue' /* webpackChunkName: "pages_deploy_pinduoduo_index" */))
+const _5045f5e9 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo\\_category.vue' /* webpackChunkName: "pages_deploy_pinduoduo__category" */))
+const _3f299da2 = () => interopDefault(import('..\\pages\\deploy\\taobao.vue' /* webpackChunkName: "pages_deploy_taobao" */))
+const _0f754073 = () => interopDefault(import('..\\pages\\deploy\\taobao\\index.vue' /* webpackChunkName: "pages_deploy_taobao_index" */))
+const _6ede1bfe = () => interopDefault(import('..\\pages\\deploy\\taobao\\_category.vue' /* webpackChunkName: "pages_deploy_taobao__category" */))
+const _b1d7ae5a = () => interopDefault(import('..\\pages\\deploy\\test.vue' /* webpackChunkName: "pages_deploy_test" */))
+const _01e38952 = () => interopDefault(import('..\\pages\\deploy\\chaxun\\_category.vue' /* webpackChunkName: "pages_deploy_chaxun__category" */))
+const _6eff2a98 = () => interopDefault(import('..\\pages\\deploy\\douyin\\_category.vue' /* webpackChunkName: "pages_deploy_douyin__category" */))
+const _26916c2c = () => interopDefault(import('..\\pages\\deploy\\guaji\\_category.vue' /* webpackChunkName: "pages_deploy_guaji__category" */))
+const _5939def0 = () => interopDefault(import('..\\pages\\deploy\\jingdong\\_category.vue' /* webpackChunkName: "pages_deploy_jingdong__category" */))
+const _2a624852 = () => interopDefault(import('..\\pages\\deploy\\muban\\_category.vue' /* webpackChunkName: "pages_deploy_muban__category" */))
+const _37414b22 = () => interopDefault(import('..\\pages\\download.vue' /* webpackChunkName: "pages_download" */))
+const _74987e82 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
+const _a50cdac2 = () => interopDefault(import('..\\pages\\price.vue' /* webpackChunkName: "pages_price" */))
+const _49a93dfa = () => interopDefault(import('..\\pages\\price\\index.vue' /* webpackChunkName: "pages_price_index" */))
+const _50976871 = () => interopDefault(import('..\\pages\\price\\test.vue' /* webpackChunkName: "pages_price_test" */))
+const _7e7abaf1 = () => interopDefault(import('..\\pages\\price\\test\\index.vue' /* webpackChunkName: "pages_price_test_index" */))
+const _76880e4a = () => interopDefault(import('..\\pages\\price\\test\\_testtype.vue' /* webpackChunkName: "pages_price_test__testtype" */))
+const _27dac8e0 = () => interopDefault(import('..\\pages\\regist.vue' /* webpackChunkName: "pages_regist" */))
+const _07e7c4b0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
 
@@ -40,103 +43,115 @@ export const routerOptions = {
 
   routes: [{
     path: "/deploy",
-    component: _97845c0e,
+    component: _61c276fe,
     children: [{
       path: "",
-      component: _5f1c0869,
+      component: _5446ace1,
       name: "deploy"
     }, {
       path: "chaxun",
-      component: _766a47d4,
+      component: _0e761768,
       name: "deploy-chaxun"
     }, {
       path: "douyin",
-      component: _aa2200d6,
+      component: _2d49ac0d,
       name: "deploy-douyin"
     }, {
       path: "guaji",
-      component: _dc3c19ce,
+      component: _4bc3d7a1,
       name: "deploy-guaji"
     }, {
       path: "jingdong",
-      component: _169added,
+      component: _6cfc4c65,
       name: "deploy-jingdong"
     }, {
       path: "muban",
-      component: _fdf01f78,
+      component: _3ae9d4cc,
       name: "deploy-muban"
     }, {
       path: "pinduoduo",
-      component: _0f34b3ac,
+      component: _6d085c24,
       children: [{
         path: "",
-        component: _6e486756,
+        component: _37d67044,
         name: "deploy-pinduoduo"
       }, {
         path: ":category",
-        component: _502d1961,
+        component: _5045f5e9,
         name: "deploy-pinduoduo-category"
       }]
     }, {
       path: "taobao",
-      component: _304146a7,
+      component: _3f299da2,
       children: [{
         path: "",
-        component: _e5cad80a,
+        component: _0f754073,
         name: "deploy-taobao"
       }, {
         path: ":category",
-        component: _2b1e6b86,
+        component: _6ede1bfe,
         name: "deploy-taobao-category"
       }]
     }, {
       path: "test",
-      component: _75e13c4b,
+      component: _b1d7ae5a,
       name: "deploy-test"
     }, {
       path: "chaxun/:category",
-      component: _8962ea42,
+      component: _01e38952,
       name: "deploy-chaxun-category"
     }, {
       path: "douyin/:category",
-      component: _2b3f7a20,
+      component: _6eff2a98,
       name: "deploy-douyin-category"
     }, {
       path: "guaji/:category",
-      component: _9e75e8b8,
+      component: _26916c2c,
       name: "deploy-guaji-category"
     }, {
       path: "jingdong/:category",
-      component: _06a46c78,
+      component: _5939def0,
       name: "deploy-jingdong-category"
     }, {
       path: "muban/:category",
-      component: _75027b4f,
+      component: _2a624852,
       name: "deploy-muban-category"
     }]
   }, {
+    path: "/download",
+    component: _37414b22,
+    name: "download"
+  }, {
+    path: "/login",
+    component: _74987e82,
+    name: "login"
+  }, {
     path: "/price",
-    component: _5a06f627,
+    component: _a50cdac2,
     children: [{
       path: "",
-      component: _ac0f170a,
+      component: _49a93dfa,
       name: "price"
     }, {
       path: "test",
-      component: _7ac3f40e,
+      component: _50976871,
       children: [{
         path: "",
-        component: _21d95469,
+        component: _7e7abaf1,
         name: "price-test"
       }, {
         path: ":testtype",
-        component: _a4e5a87c,
+        component: _76880e4a,
         name: "price-test-testtype"
       }]
     }]
   }, {
+    path: "/regist",
+    component: _27dac8e0,
+    name: "regist"
+  }, {
     path: "/",
-    component: _aeccfda0,
+    component: _07e7c4b0,
     name: "index"
   }],
 

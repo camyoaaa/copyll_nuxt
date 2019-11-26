@@ -23,7 +23,7 @@
 
 				<li class="price active"><a href="https://www.lieliu.com/price">价格表</a></li>
 
-				<li class="download"><a href="https://www.lieliu.com/d">下载软件</a></li>
+				<li class="download"><a href="/download">下载软件</a></li>
 
 				<li class="zixun"><a href="https://www.lieliu.com/zixun">资讯</a></li>
 
@@ -1535,6 +1535,7 @@
 
 <script>
 export default {
+	layout:'pricedefault',
     head(){
         return{
             meta:[

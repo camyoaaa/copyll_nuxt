@@ -10,8 +10,13 @@ import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import _6f6c098b from '..\\layouts\\default.vue'
+import _6cb5a3fa from '..\\layouts\\downloaddefault.vue'
+import _5be7f6cc from '..\\layouts\\homedefault.vue'
+import _a0b68ca4 from '..\\layouts\\logindefault.vue'
+import _55271bce from '..\\layouts\\pricedefault.vue'
+import _87c0dc56 from '..\\layouts\\registdefault.vue'
 
-const layouts = { "_default": _6f6c098b }
+const layouts = { "_default": _6f6c098b,"_downloaddefault": _6cb5a3fa,"_homedefault": _5be7f6cc,"_logindefault": _a0b68ca4,"_pricedefault": _55271bce,"_registdefault": _87c0dc56 }
 
 export default {
   head: {"title":"vue_nuxt","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
