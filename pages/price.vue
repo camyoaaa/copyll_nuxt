@@ -12,22 +12,22 @@
 			</div>
 
 			<div class="header-btn">
-				<a class="" href="https://www.lieliu.com/regist.html">注册</a>
+				<a class="" href="/regist">注册</a>
 				<span>|</span>
-				<a class="" href="https://www.lieliu.com/login.html">登录</a>
+				<a class="" href="/login">登录</a>
 			</div>
 
 			<ul class="header-nav">
 
-				<li class="home"><a href="https://www.lieliu.com/">首页</a></li>
+				<li class="home"><a href="/">首页</a></li>
 
-				<li class="price active"><a href="https://www.lieliu.com/price">价格表</a></li>
+				<li class="price active"><a href="/price">价格表</a></li>
 
 				<li class="download"><a href="/download">下载软件</a></li>
 
-				<li class="zixun"><a href="https://www.lieliu.com/zixun">资讯</a></li>
+				<!-- <li class="zixun"><a href="https://www.lieliu.com/zixun">资讯</a></li> -->
 
-				<li class=""><a class="token-link" href="https://e.lieliu.com/">发布任务</a></li>
+				<li class=""><a class="token-link" href="/deploy/taobao/flow">发布任务</a></li>
 			</ul>
 		</section>
 	</header>

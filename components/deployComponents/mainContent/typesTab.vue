@@ -15,19 +15,13 @@ export default {
     methods: {
         goto(taskType) {
             this.$router.push({
-                name: this.$route.name,
+                name: `${this.$route.name}`,
                 params: { category: taskType }
             });
         },
         isActive(taskType){
-          return taskType == this.$route.params.category;
+          return taskType == (this.$route.params.category || 'flow');
         }
     },
-    // mounted() {
-    //     // let path = this.$route.name.split("_");
-    //     // this.$router.push({
-    //     //   name: [path[0], path[1], this.tabList[0].taskType].join("_")
-    //     // });
-    // }
 };
 </script>

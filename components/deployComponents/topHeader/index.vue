@@ -16,11 +16,11 @@
                 </div>
                 <ul class="pull-right topbar-nav list-unstyled">
                     <li class="hidden-md dropdown">
-                        <a @click="gotoClientDownloadPage"><i class="lion lion-xiazai"></i> 客户端下载</a>
+                        <a href="/download"><i class="lion lion-xiazai"></i> 客户端下载</a>
                     </li>
                     <li class="hidden-md dropdown">
                         <a href="/price"><i class="lion lion-qian"></i> 任务价格表</a>
-                        <nuxt-link to="/price"><i class="lion lion-qian"></i> 任务价格表</nuxt-link>
+                        <!-- <nuxt-link to="/price"><i class="lion lion-qian"></i> 任务价格表</nuxt-link> -->
                         <!-- <a @click="gotoPriceListPage"> -->
                     </li>
                 </ul>

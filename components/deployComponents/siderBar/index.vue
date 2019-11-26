@@ -1,11 +1,9 @@
 <template>
     <!-- 左菜单开始 -->
-    <!-- ngIf: !!ispc -->
-    <!-- ngInclude: '/views/sidebar.html' -->
     <div id="sidebar">
         <div class="inner" style="top: 0px;">
             <div class="side-user text-center">
-                <div class="power_tag power_tag_0"></div>
+                <div class="power_tag" :class="userTypeClass"></div>
                 <div class="headimg pointer"></div>
                 <div class="power ng-hide">
                     <a class="btn btn-xs btn-square mbs ng-binding">ID:</a>
@@ -57,11 +55,20 @@
 import rechargeModal from "./rechargeModal.vue";
 import contactModal from "./contactModal.vue";
 
+const powerTagMap={
+    0:'power_tag_0'
+}
+
 export default {
     name: "siderBar",
     components: {
         rechargeModal,
         contactModal
+    },
+    computed:{
+        userTypeClass(){
+            return powerTagMap[this.customType];
+        }
     },
     data() {
         return {
@@ -81,43 +88,43 @@ export default {
                 // },
                 {
                     name: "淘宝任务",
-                    routeName: "deploy_taobao",
+                    routeName: "deploy-taobao",
                     activeIcon: "lion-tb",
                     silenceIcon: "lion-tb-o"
                 },
                 {
                     name: "京东任务",
-                    routeName: "deploy_jingdong",
+                    routeName: "deploy-jingdong",
                     activeIcon: "lion-jd",
                     silenceIcon: "lion-jd-o"
                 },
                 {
                     name: "拼多多任务",
-                    routeName: "deploy_pinduoduo",
+                    routeName: "deploy-pinduoduo",
                     activeIcon: "lion-pdd",
                     silenceIcon: "lion-pdd-o"
                 },
                 {
                     name: "抖音任务",
-                    routeName: "deploy_douyin",
+                    routeName: "deploy-douyin",
                     activeIcon: "lion-douyin",
                     silenceIcon: "lion-douyin-o"
                 },
                 {
                     name: "挂机赚钱",
-                    routeName: "deploy_guaji",
+                    routeName: "deploy-guaji",
                     activeIcon: "lion-guaji",
                     silenceIcon: "lion-guaji-o"
                 },
                 {
                     name: "业务查询",
-                    routeName: "deploy_chaxun",
+                    routeName: "deploy-chaxun",
                     activeIcon: "lion-chaxun",
                     silenceIcon: "lion-chaxun-o"
                 },
                 {
                     name: "任务模板",
-                    routeName: "deploy_moban",
+                    routeName: "deploy-muban",
                     activeIcon: "lion-moban",
                     silenceIcon: "lion-moban-o"
                 }
@@ -132,12 +139,12 @@ export default {
     },
     methods: {
         gotoMenu(routeName) {
-            if (routeName == "deploy_chaxun") {
-                this.$router.push({ name: "deploy_chaxun_task" });
+            if (routeName == "deploy-guaji" || routeName == "deploy-muban" || routeName == "deploy-chaxun") {
+                this.$router.push({ name: routeName });
                 return;
             }
             this.$router.push({
-                name: routeName,
+                name: `${routeName}-category`,
                 params: { category: "flow" }
             });
         },

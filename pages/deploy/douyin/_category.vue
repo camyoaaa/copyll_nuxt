@@ -6,22 +6,14 @@
 </template>
 
 <script>
-import flowTabConfig from "@/assets/deploy/taobao/flowTabConfig.js";
-import favoTabConfig from "@/assets/deploy/taobao/favoTabConfig.js";
-import cartTabConfig from "@/assets/deploy/taobao/cartTabConfig.js";
-import liveTabConfig from "@/assets/deploy/taobao/liveTabConfig.js";
-import artcTabConfig from "@/assets/deploy/taobao/artcTabConfig.js";
+import flowTabConfig from "@/assets/deploy/douyin/flowTabConfig.js";
 
 import renderComponent from "@/assets/deploy/renderFunction.js";
 export default {
     data() {
         return {
             tabList: [
-                { name: "流量", taskType: "flow" },
-                { name: "收藏", taskType: "favorite" },
-                { name: "加购", taskType: "cart" },
-                { name: "直播", taskType: "live" },
-                { name: "文章", taskType: "article" }
+                { name: "抖音任务", taskType: "flow" }
             ],
             form: {
                 taskType: "",
@@ -43,26 +35,7 @@ export default {
             render(h) {
                 let currentTab = this.$parent.currentTab;
                 let form = this.$parent.form;
-                let config = {};
-                switch (currentTab) {
-                    case "flow":
-                        config = flowTabConfig;
-                        break;
-                    case "favorite":
-                        config = favoTabConfig;
-                        break;
-                    case "cart":
-                        config = cartTabConfig;
-                        break;
-                    case "live":
-                        config = liveTabConfig;
-                        break;
-                    case "article":
-                        config = artcTabConfig;
-                        break;
-                    default:
-                        break;
-                }
+                let config = flowTabConfig;
                 let renderComponentArray = [];
                 for (let k in config) {
                     renderComponentArray.push(
@@ -91,7 +64,7 @@ export default {
     },
     computed: {
         currentTab() {
-            return this.$route.params.category;
+            return this.$route.params.category || 'flow';
         }
     }
 };

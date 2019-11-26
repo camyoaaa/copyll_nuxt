@@ -1,27 +1,27 @@
 <template>
-    <div class="task-page scroll-full">
+    <div class="task-page scroll-full ng-scope">
+        <!-- 滚动区域开始 -->
         <task-types-tab :tab-list="tabList" />
         <render-content></render-content>
     </div>
 </template>
 
 <script>
-import flowTabConfig from "@/assets/deploy/taobao/flowTabConfig.js";
-import favoTabConfig from "@/assets/deploy/taobao/favoTabConfig.js";
-import cartTabConfig from "@/assets/deploy/taobao/cartTabConfig.js";
-import liveTabConfig from "@/assets/deploy/taobao/liveTabConfig.js";
-import artcTabConfig from "@/assets/deploy/taobao/artcTabConfig.js";
+import flowTabConfig from "@/assets/deploy/jingdong/flowTabConfig.js";
+import favoTabConfig from "@/assets/deploy/jingdong/favoTabConfig.js";
+import cartTabConfig from "@/assets/deploy/jingdong/cartTabConfig.js";
+import atteTabConfig from "@/assets/deploy/jingdong/atteTabConfig.js";
 
 import renderComponent from "@/assets/deploy/renderFunction.js";
+
 export default {
     data() {
         return {
             tabList: [
                 { name: "流量", taskType: "flow" },
                 { name: "收藏", taskType: "favorite" },
+                { name: "关注", taskType: "attention" },
                 { name: "加购", taskType: "cart" },
-                { name: "直播", taskType: "live" },
-                { name: "文章", taskType: "article" }
             ],
             form: {
                 taskType: "",
@@ -54,11 +54,8 @@ export default {
                     case "cart":
                         config = cartTabConfig;
                         break;
-                    case "live":
-                        config = liveTabConfig;
-                        break;
-                    case "article":
-                        config = artcTabConfig;
+                    case "attention":
+                        config = atteTabConfig;
                         break;
                     default:
                         break;
@@ -91,7 +88,7 @@ export default {
     },
     computed: {
         currentTab() {
-            return this.$route.params.category;
+            return this.$route.params.category || "flow";
         }
     }
 };

@@ -6,6 +6,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 import moment from 'moment';
+// import Velocity from 'velocity-animate';
 
 import topHeader from "@/components/deployComponents/topHeader/index.vue";
 import siderBar from "@/components/deployComponents/siderBar/index.vue";
@@ -35,7 +36,11 @@ import deployRow from "@/components/deployComponents/mainContent/deployRow";
 Vue.use(Antd);
 Vue.use(ElementUI);
 Vue.prototype.$moment = moment;
+if (process.client) {//Velocity中使用了window环境
+    const Velocity = require('velocity-animate');
+    Vue.prototype.$velocity = Velocity;
 
+  }
 
 Vue.component(topHeader.name,topHeader);
 Vue.component(siderBar.name,siderBar);

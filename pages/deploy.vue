@@ -56,32 +56,32 @@ export default {
           content:
             "淘宝引流,商品收藏,店铺收藏,收藏加购,达人粉丝,淘宝买流量,淘宝手机流量,淘宝流量软件,淘宝流量提升,网店推广软件"
         },
-        //   {
-        //     name: 'apple-mobile-web-app-capable',
-        //     content: 'yes'
-        //   }, ,
-        //   {
-        //     name: 'apple-mobile-web-app-status-bar-style',
-        //     content: 'black'
-        //   },
-        //   {
-        //     name: 'renderer',
-        //     content: 'webkit'
-        //   }, {
-        //     name: 'full-screen',
-        //     content: 'yes'
-        //   }, {
-        //     name: 'browsermode',
-        //     content: 'application'
-        //   },
-        //   {
-        //     name: 'x5-fullscreen',
-        //     content: 'true'
-        //   },
-        //   {
-        //     name: 'x5-page-mode',
-        //     content: 'app'
-        //   },
+          // {
+          //   name: 'apple-mobile-web-app-capable',
+          //   content: 'yes'
+          // }, ,
+          // {
+          //   name: 'apple-mobile-web-app-status-bar-style',
+          //   content: 'black'
+          // },
+          // {
+          //   name: 'renderer',
+          //   content: 'webkit'
+          // }, {
+          //   name: 'full-screen',
+          //   content: 'yes'
+          // }, {
+          //   name: 'browsermode',
+          //   content: 'application'
+          // },
+          // {
+          //   name: 'x5-fullscreen',
+          //   content: 'true'
+          // },
+          // {
+          //   name: 'x5-page-mode',
+          //   content: 'app'
+          // },
         {
           hid: "description1",
           name: "description",
@@ -143,7 +143,6 @@ export default {
       ]
     };
   },
-  // components: { topHeader, siderBar, pageFooter },
   asyncData({
     isDev,
     route,
@@ -156,12 +155,7 @@ export default {
     redirect,
     error
   }) {
-    // let agent = window.navigator.userAgent; //UA
-    // let deviceReg = /(Android|iPhone|SymbianOS|Windows Phone|iPad|iPod)/i;
-    // return {
-    //     ispc: agent.match(deviceReg) === null, //判断移动端
-    //     isie: agent.match(/(msie)/i) !== null //判断IE
-    // };
+    
   },
   data() {
     return {
@@ -174,9 +168,6 @@ export default {
 body {
   font-size: 13px;
   background-color: #f5f5f5;
-}
-#wrapper {
-  /* min-height: calc(100% - 65px); */
 }
 .cursor-pointer {
   cursor: pointer;

@@ -1,13 +1,86 @@
 <template>
-    <div>
- <h1>拼多多</h1>
+    <div class="task-page scroll-full ng-scope">
+        <!-- 滚动区域开始 -->
+        <task-types-tab :tab-list="tabList" />
+        <render-content></render-content>
     </div>
 </template>
 
 <script>
-    export default {
-        validate(){
-            return true;
+import flowTabConfig from "@/assets/deploy/pinduoduo/flowTabConfig.js";
+import favoTabConfig from "@/assets/deploy/pinduoduo/favoTabConfig.js";
+
+import renderComponent from "@/assets/deploy/renderFunction.js";
+
+
+export default {
+    data() {
+        return {
+            tabList: [
+                { name: "流量", taskType: "flow" },
+                { name: "收藏", taskType: "favorite" }
+            ],
+            form: {
+                taskType: "",
+                daterange: "",
+                productInfo: {},
+                keywords: [],
+                scanTime: "",
+                scanDeep: "",
+                taskmark: "",
+                taskDaily: 100,
+                taskAlloc: [],
+                planType: "",
+                scanGoodsNum: 1
+            }
+        };
+    },
+    components: {
+        renderContent: {
+            render(h) {
+                let currentTab = this.$parent.currentTab;
+                let form = this.$parent.form;
+                let config = {};
+                switch (currentTab) {
+                    case "flow":
+                        config = flowTabConfig;
+                        break;
+                    case "favorite":
+                        config = favoTabConfig;
+                        break;
+                    default:
+                        break;
+                }
+                let renderComponentArray = [];
+                for (let k in config) {
+                    renderComponentArray.push(
+                        renderComponent(
+                            h,
+                            currentTab,
+                            form,
+                            k,
+                            config[k],
+                            config
+                        )
+                    );
+                }
+                return (
+                    <div class="scroll-viewer">
+                        <div class="tab-content mbn task-content">
+                            <div class="form-horizontal">
+                                {renderComponentArray}
+                            </div>
+                        </div>
+                        <deploy-row form={form} config={config}></deploy-row>
+                    </div>
+                );
+            }
+        }
+    },
+    computed: {
+        currentTab() {
+            return this.$route.params.category;
         }
     }
+};
 </script>
