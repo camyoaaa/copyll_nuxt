@@ -56,60 +56,14 @@ export default {
           content:
             "淘宝引流,商品收藏,店铺收藏,收藏加购,达人粉丝,淘宝买流量,淘宝手机流量,淘宝流量软件,淘宝流量提升,网店推广软件"
         },
-          // {
-          //   name: 'apple-mobile-web-app-capable',
-          //   content: 'yes'
-          // }, ,
-          // {
-          //   name: 'apple-mobile-web-app-status-bar-style',
-          //   content: 'black'
-          // },
-          // {
-          //   name: 'renderer',
-          //   content: 'webkit'
-          // }, {
-          //   name: 'full-screen',
-          //   content: 'yes'
-          // }, {
-          //   name: 'browsermode',
-          //   content: 'application'
-          // },
-          // {
-          //   name: 'x5-fullscreen',
-          //   content: 'true'
-          // },
-          // {
-          //   name: 'x5-page-mode',
-          //   content: 'app'
-          // },
         {
           hid: "description1",
           name: "description",
           content:
             "猎流是一款提升淘宝/京东/拼多多店铺流量、店铺收藏、商品加购的引流软件，真实人工搜索，访客遍布全国各地，可深度浏览货比三家，支持提升PC端、手淘无线APP流量，快速提升淘宝店铺权重，优化商品宝贝排名人气。"
         }
-        //   {
-        //     name: 'author',
-        //     content: 'keduoda.com'
-        //   },
-        //   {
-        //     'http-equiv': "Access-Control-Allow-Origin",
-        //     content: "*"
-        //   }, {
-        //     'http-equiv': "Access-Control-Allow-Origin",
-        //     content: "*"
-        //   }
       ],
       link: [
-        {
-          rel: "shortcut icon",
-          href: "//mapp.alicdn.com/1511439261624KZqmvC8fhQJouw2.png",
-          type: "image/png"
-        },
-        {
-          rel: "shortcut icon",
-          href: "/favicon.ico"
-        },
         {
           rel: "apple-touch-icon-precomposed",
           sizes: "114x114",
@@ -136,11 +90,7 @@ export default {
           href: "/deploy/app.css"
         },
       ],
-      noscript: [
-        {
-          innerHTML: "This website requires JavaScript."
-        }
-      ]
+      
     };
   },
   asyncData({

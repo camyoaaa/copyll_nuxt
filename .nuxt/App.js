@@ -19,7 +19,7 @@ import _87c0dc56 from '..\\layouts\\registdefault.vue'
 const layouts = { "_default": _6f6c098b,"_downloaddefault": _6cb5a3fa,"_homedefault": _5be7f6cc,"_logindefault": _a0b68ca4,"_pricedefault": _55271bce,"_registdefault": _87c0dc56 }
 
 export default {
-  head: {"title":"vue_nuxt","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"vue_nuxt","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"noscript":[{"innerHTML":"This website requires JavaScript."}],"style":[],"script":[]},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })

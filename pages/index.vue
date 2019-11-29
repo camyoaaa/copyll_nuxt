@@ -7,9 +7,12 @@
 			</div>
 
 			<div class="header-btn">
-				<a class="" href="/regist">注册</a>
+				<!-- <a class="" href="/regist">注册</a>
 				<span>|</span>
-				<a class="" href="/login">登录</a>
+				<a class="" href="/login">登录</a> -->
+				<i class="user-power"></i>					<a class="login-link" href="https://e.lieliu.com/#/?source=site&amp;spm=U2FsdGVkX19rhKd0dCLrBYmQL7ECsz5dTGRzE5P4e6WP51eUXVazd/nRl+m22HEn
+La399FWKOVWArvE6MEDhgoF4k6+/4ha927GDSCiJZvsfKJjPIUpVEKfhIErWGJmp
+&amp;uid=1633353">13088888897</a>					<a class="logout-link" href="javascript:;">退出</a>
 			</div>
 
 			<ul class="header-nav">

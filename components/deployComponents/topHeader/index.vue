@@ -6,7 +6,9 @@
                 <a class="logo" @click="goHome">
                     <!-- <h1 style="color:white;font-weight:bold">Logo</h1> -->
                 </a>
-                <div class="pull-right topbar-nav list-unstyled ng-scope">
+
+                <user-drop-down v-if="userLogined"></user-drop-down>
+                <div v-else class="pull-right topbar-nav list-unstyled ng-scope">
                     <div class="login-btn-group">
                         <a class="btn btn-yellow btn-square lion lion-yonghu2" @click="goLogin">
                             登录</a>
@@ -20,8 +22,6 @@
                     </li>
                     <li class="hidden-md dropdown">
                         <a href="/price"><i class="lion lion-qian"></i> 任务价格表</a>
-                        <!-- <nuxt-link to="/price"><i class="lion lion-qian"></i> 任务价格表</nuxt-link> -->
-                        <!-- <a @click="gotoPriceListPage"> -->
                     </li>
                 </ul>
                 <ul class="pull-left topbar-nav list-unstyled ng-scope" style="margin-left: 55px;">
@@ -40,12 +40,13 @@
 </template>
 
 <script>
+import userDropDown from "./userDropDown";
 import loginModal from "./login.vue";
 import registModal from "./regist.vue";
 
 export default {
-    name:'topHeader',
-    components: { loginModal, registModal },
+    name: "topHeader",
+    components: { userDropDown, loginModal, registModal },
     methods: {
         goHome() {
             this.$router.push({ name: "home" });
@@ -65,6 +66,11 @@ export default {
         gotoNoticePage() {
             this.$router.push({ name: "deploy_notice" });
         }
+    },
+    data() {
+        return {
+            userLogined: false
+        };
     }
 };
 </script>
