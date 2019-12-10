@@ -28,13 +28,11 @@
 </template>
 
 <script>
-import '@/assets/deploy/pluginsInit.js';
+import "@/assets/deploy/pluginsInit.js";
 import zhCN from "ant-design-vue/lib/locale-provider/zh_CN";
-import pageConfig from "@/assets/deploy/pageConfig.js";
 import topHeader from "@/components/deployComponents/topHeader";
 import siderBar from "@/components/deployComponents/siderBar";
 import pageFooter from "@/components/deployComponents/pageFooter";
-// console.log('pageConfig',pageConfig);
 export default {
   components: { topHeader, siderBar, pageFooter },
   head() {
@@ -88,9 +86,8 @@ export default {
         {
           rel: "stylesheet",
           href: "/deploy/app.css"
-        },
-      ],
-      
+        }
+      ]
     };
   },
   asyncData({
@@ -104,9 +101,7 @@ export default {
     res,
     redirect,
     error
-  }) {
-    
-  },
+  }) {},
   data() {
     return {
       zhCN

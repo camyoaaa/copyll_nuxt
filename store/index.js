@@ -13,19 +13,8 @@ export const state = () => ({
 export const mutations = {
   userRegist(state, payload) {
     state.userInfo = {
-      ...state,
+      ...state.userInfo,
       ...payload
     };
-  }
-};
-
-export const actions = {
-  async userRegistAction({
-    commit
-  }, data) {
-    try {
-      let res = await axios.post("/users/regist", data);
-      commit("userRegist", res.data);
-    } catch (error) {}
   }
 };

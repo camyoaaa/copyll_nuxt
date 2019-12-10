@@ -12,7 +12,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_axios_02f4af4c from 'nuxt_plugin_axios_02f4af4c' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_axios_5e481784 from 'nuxt_plugin_axios_5e481784' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_axiosconfig_017b74a8 from 'nuxt_plugin_axiosconfig_017b74a8' // Source: ..\\plugins\\axios-config.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -170,8 +170,8 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_axios_02f4af4c === 'function') {
-    await nuxt_plugin_axios_02f4af4c(app.context, inject)
+  if (typeof nuxt_plugin_axios_5e481784 === 'function') {
+    await nuxt_plugin_axios_5e481784(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axiosconfig_017b74a8 === 'function') {

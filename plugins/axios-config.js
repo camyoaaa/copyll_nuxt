@@ -26,6 +26,7 @@ export default function ({
      */
     response => {
       const res = response.data
+      return res;
       if (res.code === 20000) {
         return res
       } else {

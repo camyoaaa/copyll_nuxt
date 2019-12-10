@@ -3,8 +3,7 @@ module.exports = {
    ** Headers of the page
    */
   server: {
-    port: 3000,
-    host: '127.0.0.1'
+    port: 3000
   },
   head: {
     title: "vue_nuxt",
@@ -39,20 +38,19 @@ module.exports = {
   /*
    ** Build configuration
    */
-  plugins: ['~/plugins/axios-config.js'], //全局axios配置
-  modules: ["@nuxtjs/axios", '@nuxtjs/proxy'],
+  plugins: ["~/plugins/axios-config.js"], //全局axios配置
+  modules: ["@nuxtjs/axios", "@nuxtjs/proxy"],
   axios: {
     proxy: true,
     prefix: "/api",
     credentials: true
-    // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
     "/api": {
-      target: "https://127.0.0.1:9527/", //这个网站是开源的可以请求到数据的
+      target: "http://192.168.3.94:9527", //这个网站是开源的可以请求到数据的
+      changeOrigin: true,
       pathRewrite: {
-        "^/api": "",
-        changeOrigin: true
+        "^/api": "/"
       }
     }
   },
