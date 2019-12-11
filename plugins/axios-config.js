@@ -6,6 +6,12 @@ export default function ({
   $axios.interceptors.request.use(
     config => {
       // do something before request is sent
+      let userToken = (localStorage.getItem('userInfo') || {}).userToken;
+      //请求前加入token头部
+      if (userToken) {
+        config.headers['Authorization'] = userToken;
+      }
+
       return config
     },
     error => {

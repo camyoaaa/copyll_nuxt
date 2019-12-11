@@ -6,20 +6,20 @@
                 <div class="power_tag" :class="userTypeClass"></div>
                 <div class="headimg pointer"></div>
                 <div class="power ng-hide">
-                    <a class="btn btn-xs btn-square mbs ng-binding">ID:</a>
+                    <a class="btn btn-xs btn-square mbs ng-binding">ID:{{userInfo.userid}}</a>
                 </div>
-                <small class="ng-binding ng-hide">N</small>
+                <small class="ng-binding ng-hide">{{phoneHide(userInfo.phone)}}</small>
             </div>
             <div class="side-socre">
                 <ul class="list-unstyled">
                     <li ng-if="user.p !== '18'" class="ng-scope">
                         <span>充值积分：</span>
-                        <b class="text-orange ng-binding">3,400</b>
+                        <b class="text-orange ng-binding">{{Number(userInfo.chargescore).toLocaleString()}}</b>
                     </li>
                     <li ng-if="user.p !== '18'" class="ng-scope">
                         <span tooltip="流量积分仅用于发布流量任务">
                             <span>流量积分：</span>
-                            <b class="text-orange ng-binding">40,000</b>
+                            <b class="text-orange ng-binding">{{Number(userInfo.flowscore).toLocaleString()}}</b>
                         </span>
                         <a @click="getScore" tooltip="领取积分">
                             <img src="/deploy/img/getScore.gif" style="margin-left:5px" />
@@ -55,9 +55,12 @@
 import rechargeModal from "./rechargeModal.vue";
 import contactModal from "./contactModal.vue";
 
-const powerTagMap={
-    0:'power_tag_0'
-}
+import { phoneHide } from "@/assets/commFunc.js";
+import { mapState } from "vuex";
+
+const powerTagMap = {
+    0: "power_tag_0"
+};
 
 export default {
     name: "siderBar",
@@ -65,20 +68,14 @@ export default {
         rechargeModal,
         contactModal
     },
-    computed:{
-        userTypeClass(){
+    computed: {
+        ...mapState(["userInfo"]),
+        userTypeClass() {
             return powerTagMap[this.customType];
         }
     },
     data() {
         return {
-            userInfo: {
-                customType: 0, //0表示未登录
-                userID: 1123456,
-                userTel: 18428369147,
-                rechargeIntegral: 2000,
-                flowIntegral: 2798000
-            },
             menuList: [
                 // {
                 //   name: "工具箱",
@@ -138,8 +135,13 @@ export default {
         };
     },
     methods: {
+        phoneHide,
         gotoMenu(routeName) {
-            if (routeName == "deploy-guaji" || routeName == "deploy-muban" || routeName == "deploy-chaxun") {
+            if (
+                routeName == "deploy-guaji" ||
+                routeName == "deploy-muban" ||
+                routeName == "deploy-chaxun"
+            ) {
                 this.$router.push({ name: routeName });
                 return;
             }

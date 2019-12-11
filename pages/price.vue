@@ -1546,7 +1546,7 @@ export default {
             ],
             link:[
                 {rel:'stylesheet',type:'text/css',href:'/price/font_1176299_y0zgnm40z7f.css'},
-                {rel:'stylesheet',type:'text/css',href:'/price/animate.css'},
+                {rel:'stylesheet',type:'text/css',href:'/deploy/animate.min.css'},
                 {rel:'stylesheet',type:'text/css',href:'/price/new.css'},
                 {rel:'stylesheet',type:'text/css',href:'/price/zero-modal.css'},
                 {rel:'stylesheet',type:'text/css',href:'/price/price.css'},
