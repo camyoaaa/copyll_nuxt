@@ -30,6 +30,7 @@ export const mutations = {
   },
   userLogout(state) {
     localStorage.removeItem('userInfo');
+    localStorage.removeItem('userToken');
     state.userInfo = new UserInfo()
   }
 };

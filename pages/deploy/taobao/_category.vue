@@ -91,8 +91,7 @@ export default {
     },
     computed: {
         currentTab() {
-            let currentTab = this.$route.params.category || 'flow';
-            console.log(currentTab);
+            let currentTab = this.$route.params.category || "flow";
             return currentTab;
         }
     }

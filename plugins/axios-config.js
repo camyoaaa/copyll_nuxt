@@ -5,17 +5,14 @@ export default function ({
   // request interceptor
   $axios.interceptors.request.use(
     config => {
-      // do something before request is sent
-      let userToken = (localStorage.getItem('userInfo') || {}).userToken;
       //请求前加入token头部
+      let userToken = localStorage.getItem('Authorization');
       if (userToken) {
         config.headers['Authorization'] = userToken;
       }
-
-      return config
+      return config;
     },
     error => {
-      // do something with request error
       return Promise.reject(error)
     }
   )
@@ -31,7 +28,15 @@ export default function ({
      * You can also judge the status by HTTP Status Code
      */
     response => {
-      const res = response.data
+      const res = response.data;
+      if (response.headers.authorization) { //如果后端返回认证token,则保存
+        localStorage.setItem('Authorization', response.headers.authorization);
+      }
+
+      if (res.status == '403' && res.code == 0) { //登出操作
+        localStorage.removeItem('userInfo');
+        localStorage.removeItem('userToken');
+      }
       return res;
       if (res.code === 20000) {
         return res

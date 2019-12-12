@@ -79,7 +79,6 @@ export default {
     },
     mounted() {
         let userInfo = JSON.parse(localStorage.getItem("userInfo"));
-        console.log("userInfo", localStorage.getItem("userInfo"));
         userInfo && this.setUserInfo(userInfo);
     }
 };

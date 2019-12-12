@@ -86,8 +86,15 @@ export default {
         }
     },
     methods: {
-        deployTask() {
+        async deployTask() {
             this.$emit("deploy");
+            let result = await this.$axios.post(
+                "http://192.168.3.94:9527/tasks/save",
+                this.form
+            );
+            if (result.status == 200) {
+                console.log("保存成功");
+            }
         },
         gotoPriceListPage() {
             window.open(`${window.location.host}/price`);

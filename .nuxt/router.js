@@ -11,6 +11,7 @@ const _8bab7050 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo.vue'
 const _9f891c96 = () => interopDefault(import('..\\pages\\deploy\\pinduoduo\\_category.vue' /* webpackChunkName: "pages_deploy_pinduoduo__category" */))
 const _5d3401fb = () => interopDefault(import('..\\pages\\deploy\\taobao.vue' /* webpackChunkName: "pages_deploy_taobao" */))
 const _1d0313b2 = () => interopDefault(import('..\\pages\\deploy\\taobao\\_category.vue' /* webpackChunkName: "pages_deploy_taobao__category" */))
+const _3132bc9f = () => interopDefault(import('..\\pages\\deploy\\test.vue' /* webpackChunkName: "pages_deploy_test" */))
 const _1d24224c = () => interopDefault(import('..\\pages\\deploy\\douyin\\_category.vue' /* webpackChunkName: "pages_deploy_douyin__category" */))
 const _11ffb9a4 = () => interopDefault(import('..\\pages\\deploy\\jingdong\\_category.vue' /* webpackChunkName: "pages_deploy_jingdong__category" */))
 const _280cb624 = () => interopDefault(import('..\\pages\\download.vue' /* webpackChunkName: "pages_download" */))
@@ -62,6 +63,10 @@ export const routerOptions = {
         component: _1d0313b2,
         name: "deploy-taobao-category"
       }]
+    }, {
+      path: "test",
+      component: _3132bc9f,
+      name: "deploy-test"
     }, {
       path: "douyin/:category?",
       component: _1d24224c,
